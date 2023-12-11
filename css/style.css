@@ -109,6 +109,10 @@ img {
 	font-size: 13px;
 	font-weight: 300;
 	opacity: 0.8;
+	transition: all .3s;
+}
+.nav-link:hover {
+	color: #DE3C3C;
 }
 
 .burger {
@@ -202,7 +206,7 @@ img {
 	display: flex;
 	justify-content: space-between;
 	align-items: center;
-	max-width: 1047px;
+	max-width: 1091px;
 	margin: 0 auto;
 	gap: 50px;
 }
@@ -212,7 +216,7 @@ img {
 }
 
 .hero-content-right {
-	flex: 0 1 480px;
+	flex: 0 1 521px;
 }
 
 .hero-img {
@@ -221,6 +225,7 @@ img {
 
 .hero-text {
 	margin-top: 12px;
+	max-width: 460px;
 }
 
 .hero-btn {
@@ -242,12 +247,16 @@ img {
 		flex: unset;
 	}
 
+	.hero-text {
+		max-width: 100%;
+	}
+
 }
 
 /* cards */
 
 .cards {
-	padding: clamp(50px, 9vw, 80px) 0;
+	padding: clamp(50px, 9vw, 80px) 0 clamp(50px, 10vw, 180px);
 }
 
 .cards-columns {
@@ -288,6 +297,9 @@ img {
 
 .card-title {
 	margin-top: 15px;
+	color: #212121;
+	font-size: 18px;
+	font-weight: 500;
 }
 
 .card-text {
@@ -354,7 +366,7 @@ img {
 
 /* clients */
 .clients {
-	padding: clamp(50px, 10vw, 200px) 0 clamp(50px, 10vw, 100px);
+	padding: clamp(50px, 11vw, 205px) 0 clamp(50px, 10vw, 100px);
 	overflow: hidden;
 }
 
@@ -365,7 +377,7 @@ img {
 .clients-left-img,
 .clients-right-img {
 	position: absolute;
-	bottom: 32px;
+	bottom: 17px;
 }
 .clients-left-img {
 	right: calc(100% - 9vw);
@@ -385,7 +397,7 @@ img {
 	padding: 10px;
 	width: 100%;
 	overflow: hidden;
-	margin-top: 84px;
+	margin-top: 77px;
 	position: relative;
 }
 
@@ -441,8 +453,8 @@ img {
 }
 
 .swiper-pagination-bullet {
-	height: 5px;
-	width: 5px;
+	height: 5px !important;
+	width: 5px !important;
 	transition: all 300ms;
 	background-color: #949EA7;
 	margin: unset !important;
@@ -460,12 +472,12 @@ img {
 
 @media screen and (min-width: 1920px) {
 	.clients-left-img {
-		left: 0;
+		left: 78px;
 		right: unset;
 		translate: -80% 0;
 	}
 	.clients-right-img {
-		right: 0;
+		right: -10px;
 		left: unset;
 		translate: 80% 0;
 	}
@@ -499,7 +511,7 @@ img {
 /* pricing */
 
 .pricing {
-	padding: clamp(50px, 10vw, 100px) 0 clamp(300px, 46vw, 430px);
+	padding: clamp(50px, 10vw, 92px) 0 clamp(300px, 46vw, 430px);
 	background: url('../img/pricing-background.png') no-repeat center top / cover;
 	position: relative;
 }
@@ -649,7 +661,7 @@ img {
 	align-items: center;
 
 	position: absolute;
-	bottom: -50px;
+	bottom: -69px;
 	left: 50%;
 	translate: -50% 0;
 }
@@ -660,10 +672,10 @@ img {
 }
 .questions-card-text {
 	margin-top: 4px;
+	margin-bottom: 30px;
 }
 
 .questions-card-btns {
-	margin-top: 30px;
 	display: flex;
 	align-items: center;
 	justify-content: center;
@@ -671,11 +683,16 @@ img {
 	gap: clamp(20px, 4vw, 60px);
 }
 
+.questions-card-btns .btn:not(.questions-card-btn) {
+	padding: 12px 20px;
+}
+
 .btn.questions-card-btn {
 	border: 1px solid #323643;
 	background-color: #FFF;
 	color: #212121;
 	transition: all 300ms;
+	padding: 12px 35px;
 }
 .btn.questions-card-btn:hover {
 	background-color: #212121;
@@ -686,7 +703,7 @@ img {
 /* footer */
 
 .footer {
-	margin-top: clamp(100px, 20vw, 220px);
+	margin-top: clamp(100px, 20vw, 240px);
 	padding-bottom: 40px;
 }
 
